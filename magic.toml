@@ -1,9 +1,9 @@
 [[pages]]
-width = 8
-height = 5
+width = 16
+height = 9
   [[pages.frames]]
-  top = 1
-  left = 1
+  top = 2
+  left = 2
   width = 4
   height = 1
     [pages.frames.contents]
@@ -11,13 +11,13 @@ height = 5
     [pages.frames.contents.config]
     name = "Cam"
   [[pages.frames]]
-  top = 5
-  left = 7
+  top = 8
+  left = 15
   width = 2
-  height = 1
+  height = 2
     [pages.frames.contents]
     widget = "clock"
     [pages.frames.contents.config]
-    style = "digital"
+    style = "analog"
     hour-format = 12
-    show-seconds = false
+    show-seconds = true

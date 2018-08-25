@@ -26,7 +26,7 @@ const App = ({ asleep, currentPage, pages, changePage }) => (
 
 export default App
   ::propTypes({
-    aleep: PropTypes.bool.isRequired,
+    asleep: PropTypes.bool.isRequired,
     pages: PropTypes.arrayOf(Page).isRequired,
     currentPage: PropTypes.number.isRequired,
     changePage: PropTypes.func.isRequired,

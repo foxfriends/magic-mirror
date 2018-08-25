@@ -1,12 +1,10 @@
-import { combineReducers } from 'redux';
-import { combineEpics, ofType } from 'redux-observable';
-import { switchMap, map } from 'rxjs/operators';
-import toml from 'toml';
+import { combineEpics } from 'redux-observable';
+
+import { reducer as widgetReducer, epic as widgetEpic } from './Widget/ducks';
 
 function init() {
   return {
     asleep: false,
-    time: new Date(),
     currentPage: 0,
     ...window.config,
   };
@@ -14,9 +12,9 @@ function init() {
 
 const CHANGE_PAGE = Symbol('magic/app/change-page');
 
-export const changePage = page => ({ action: CHANGE_PAGE, page });
+export const changePage = page => ({ type: CHANGE_PAGE, page });
 
-function appReducer(state = init(), action = {}) {
+export default function reducer(state = init(), action = {}) {
   switch (action.type) {
     case CHANGE_PAGE:
       return { ...state, currentPage: action.page };
@@ -24,9 +22,5 @@ function appReducer(state = init(), action = {}) {
       return state;
   }
 }
-
-export const reducer = combineReducers({
-  app: appReducer,
-})
 
 export const epic = combineEpics();

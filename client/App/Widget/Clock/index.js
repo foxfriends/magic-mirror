@@ -9,7 +9,7 @@ import S from './index.css';
 const Clock = ({ time, hourFormat, style, showSeconds }) => (
   <div className={S.clock}>
     {style === 'analog'
-      ? <AnalogClock time={time} hourFormat={hourFormat} showSeconds={showSeconds} />
+      ? <AnalogClock time={time} showSeconds={showSeconds} />
       : <DigitalClock time={time} hourFormat={hourFormat} showSeconds={showSeconds} />
     }
   </div>
@@ -27,4 +27,6 @@ export default Clock
     hourFormat: 12,
     showSeconds: false,
   })
-  ::connect(({ app: { time } }) => ({ time }));
+  ::connect(({
+    widget: { global: { time } },
+  }) => ({ time }));

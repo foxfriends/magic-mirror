@@ -61,5 +61,5 @@ export default Greeting
     name: '',
   })
   ::connect(({
-    app: { time },
+    widget: { global: { time } },
   }) => ({ time }));
