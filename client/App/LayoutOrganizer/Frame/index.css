@@ -6,4 +6,5 @@
 
   grid-column: var(--left) / span var(--width);
   grid-row: var(--top) / span var(--height);
+  overflow: hidden;
 }

@@ -11,6 +11,19 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-LightItalic.ttf');
+  font-weight: 300;
+  font-style: italic;
+}
+
 :global(:root) {
   --color--background: black;
   --color--text: white;
@@ -18,8 +31,12 @@
   --font--body: 'Alegreya Sans', sans-serif;
   --font--heading: 'Alegreya Sans', sans-serif;
 
-  --font-size--body: 24pt;
-  --font-size--heading: 32pt;
+  --font-size--body: 32pt;
+  --font-size--note: 20pt;
+  --font-size--heading: 40pt;
+
+  --font-weight--regular: 200;
+  --font-weight--bold: 300;
 }
 
 :global(body) {

@@ -1,0 +1,5 @@
+.greeting {
+  margin: 1in 0 0 1in;
+  font-weight: var(--font-weight--bold);
+  font-size: var(--font-size--heading);
+}

@@ -8,10 +8,16 @@ height = 5
   height = 1
     [pages.frames.contents]
     widget = "greeting"
+    [pages.frames.contents.config]
+    name = "Cam"
   [[pages.frames]]
-  top = 1
+  top = 5
   left = 7
   width = 2
-  height = 2
+  height = 1
     [pages.frames.contents]
-    widget = "weather"
+    widget = "clock"
+    [pages.frames.contents.config]
+    style = "digital"
+    hour-format = 12
+    show-seconds = false

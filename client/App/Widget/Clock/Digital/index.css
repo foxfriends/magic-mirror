@@ -1,0 +1,9 @@
+.time {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--font-size--body);
+  font-weight: var(--font-weight--regular);
+}
+
+.seconds {
+  font-size: var(--font-size--note);
+}

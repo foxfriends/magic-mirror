@@ -7,5 +7,5 @@ export const Frame = PropTypes.shape({
   left: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  contents: PropTypes.any,
+  contents: Widget,
 });

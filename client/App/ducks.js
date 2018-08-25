@@ -5,6 +5,8 @@ import toml from 'toml';
 
 function init() {
   return {
+    asleep: false,
+    time: new Date(),
     currentPage: 0,
     ...window.config,
   };
