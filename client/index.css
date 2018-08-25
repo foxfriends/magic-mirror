@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-Thin.ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('./assets/fonts/AlegreyaSans-ThinItalic.ttf');
+  font-weight: 200;
+  font-style: italic;
+}
+
+:global(:root) {
+  --color--background: black;
+  --color--text: white;
+
+  --font--body: 'Alegreya Sans', sans-serif;
+  --font--heading: 'Alegreya Sans', sans-serif;
+
+  --font-size--body: 24pt;
+  --font-size--heading: 32pt;
+}
+
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font--body);
+  font-size: var(--font-size--body);
+  background-color: var(--color--background);
+  color: var(--color--text);
+}
+
+:global(#root) {
+  width: 100vw;
+  height: 100vh;
+}

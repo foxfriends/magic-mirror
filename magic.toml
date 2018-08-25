@@ -1,0 +1,17 @@
+[[pages]]
+width = 8
+height = 5
+  [[pages.frames]]
+  top = 1
+  left = 1
+  width = 4
+  height = 1
+    [pages.frames.contents]
+    widget = "greeting"
+  [[pages.frames]]
+  top = 1
+  left = 7
+  width = 2
+  height = 2
+    [pages.frames.contents]
+    widget = "weather"

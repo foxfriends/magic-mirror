@@ -1,0 +1,9 @@
+.frame {
+  --top: 0;
+  --left: 0;
+  --width: 0;
+  --height: 0;
+
+  grid-column: var(--left) / span var(--width);
+  grid-row: var(--top) / span var(--height);
+}
