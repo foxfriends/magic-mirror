@@ -39,7 +39,6 @@
 .secondHand {
   height: 20%;
   width: 1px;
-  transition: 0.05s transform;
 }
 
 .hourMark {
