@@ -7,21 +7,44 @@
 .page {
   --page-offset: 0;
 
+  position: relative;
   width: 100%;
   height: 100%;
 
   transform: var(--page-offset);
   transition: transform 0.3s;
+
+  &.previous {
+    --page-offset: -100vw;
+  }
+
+  &.current {
+    --page-offset: 0;
+  }
+
+  &.next {
+    --page-offset: 100vw;
+  }
 }
 
-.previous {
-  --page-offset: -100vw;
+.dotsContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.current {
-  --page-offset: 0;
-}
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin: 8px;
+  background-color: var(--color--text);
 
-.next {
-  --page-offset: 100vw;
+  &.previous, &.next {
+    opacity: 0.3;
+  }
 }

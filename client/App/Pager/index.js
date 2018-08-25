@@ -14,7 +14,14 @@ const Pager = ({ children, current, onChangePage }) => (
         { child }
       </div>
     )}
-    {/* TODO: pager dots */}
+    {children.length > 1
+      ? (
+        <div className={S.dotsContainer}>
+          {children.map((_, index) => <div className={classNames(S.dot, classForDirection(Math.sign(index - current)))} />)}
+        </div>
+      )
+      : null
+    }
   </div>
 );
 
