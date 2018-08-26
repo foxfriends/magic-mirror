@@ -7,7 +7,7 @@ import { nextPage, previousPage } from './App/ducks';
 import App from './App';
 import store from './store';
 
-import { listenFor } from './voice';
+import { listenFor } from './input';
 
 import './index.css';
 

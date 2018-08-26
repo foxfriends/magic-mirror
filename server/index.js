@@ -1,22 +1,25 @@
-
 const http = require('http');
+const socketIO = require('socket.io');
 const Koa = require('koa');
+const bodyparser = require('koa-bodyparser');
 
 require('./require-extensions');
-const { static, inject } = require('./middleware');
-
-const PORT = 1829;
+const socketHandler = require('./socket-handler');
+const { logger, inject, static, broadcast, mount } = require('./middleware');
 
 const app = new Koa();
-app.use(inject({
-  config: JSON.stringify(require('../magic.toml')),
-}));
-app.use(static('./public_html'));
-
 const server = http.createServer(app.callback());
-server.listen(PORT);
+const io = socketIO(server);
 
-module.exports = {
-  server,
-  url: `http://localhost:${PORT}`,
-};
+io.on('connection', socketHandler(io));
+
+app
+  .use(logger('HTTP Request'))
+  .use(bodyparser())
+  .use(inject({ config: JSON.stringify(require('../magic.toml')) }))
+  .use(mount('/broadcast', broadcast(io)))
+  .use(static('./public_html'));
+
+server;
+
+module.exports = server;
