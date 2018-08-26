@@ -1,0 +1,70 @@
+0	[<s>]	sil
+1	[</s>]	sil
+2	[up]	ah p
+2	[left]	l eh f t
+2	[right]	r ay t
+2	[down]	d aw n
+3	[next]	n eh k s t
+3	[previous]	p r iy v iy
+3	[first]	f ih r s
+3	[last]	l ax s t
+4	[go]	g ow
+5	[page]	p ey jh
+6	[zero]	z ih r ow
+6	[one]	w ah n
+6	[two]	t uw
+6	[three]	th r iy
+6	[four]	f ao r
+6	[five]	f ay v
+6	[six]	s ih k s
+6	[seven]	s eh v ax n
+6	[eight]	ey t
+6	[nine]	n ay n
+6	[ten]	t eh n
+6	[eleven]	ix l eh v ax n
+6	[twelve]	t w eh l v
+7	[a]	ey
+7	[b]	b iy
+7	[c]	s iy
+7	[d]	d iy
+7	[e]	iy
+7	[f]	eh f
+7	[g]	jh iy
+7	[h]	ey ch
+7	[i]	ay
+7	[j]	jh ey
+7	[k]	k ey
+7	[l]	eh l
+7	[m]	eh m
+7	[n]	eh n
+7	[o]	ow
+7	[p]	p iy
+7	[q]	k y uw
+7	[r]	ah r
+7	[s]	eh s
+7	[t]	t iy
+7	[u]	y uw
+7	[v]	v iy
+7	[w]	d ax
+7	[x]	eh k s
+7	[y]	w ay
+7	[z]	z iy
+8	[_NOISE_]	hh
+8	[_NOISE_]	hh ah
+8	[_NOISE_]	hh ax
+8	[_NOISE_]	k
+8	[_NOISE_]	k ah
+8	[_NOISE_]	k ax
+8	[_NOISE_]	t
+8	[_NOISE_]	t ah
+8	[_NOISE_]	t ax
+8	[_NOISE_]	s
+8	[_NOISE_]	s ah
+8	[_NOISE_]	s ax
+8	[_NOISE_]	f m
+8	[_NOISE_]	l ax
+8	[_NOISE_]	l ah
+8	[hello]	hh eh l ow
+8	[well]	w eh l
+8	[please]	p l iy z
+8	[house]	hh aw s

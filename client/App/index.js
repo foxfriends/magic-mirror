@@ -10,14 +10,13 @@ import Widget from './Widget';
 import * as ducks from './ducks';
 import S from './index.css';
 
-const App = ({ asleep, currentPage, pages, changePage }) => (
+const App = ({ asleep, currentPage, pages }) => (
   <>
-    <Pager
-      current={currentPage}
-      onChangePage={changePage}
-      >
+    <Pager current={currentPage}>
       {pages.map(({ width, height, frames }, i) => (
-        <LayoutOrganizer width={width} height={height} frames={frames} ChildComponent={Widget} key={i} />
+        <div className={S.pageBacking} key={i}>
+          <LayoutOrganizer width={width} height={height} frames={frames} ChildComponent={Widget} />
+        </div>
       ))}
     </Pager>
     <div className={classNames(S.sleepOverlay, asleep ? S.asleep : null)} />
@@ -29,7 +28,5 @@ export default App
     asleep: PropTypes.bool.isRequired,
     pages: PropTypes.arrayOf(Page).isRequired,
     currentPage: PropTypes.number.isRequired,
-    changePage: PropTypes.func.isRequired,
   })
-  ::dispatchers(ducks)
   ::connect(({ app: { asleep, currentPage, pages }}) => ({ asleep, currentPage, pages }));

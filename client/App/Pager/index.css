@@ -1,4 +1,5 @@
 .pager {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -6,12 +7,16 @@
 
 .page {
   --page-offset: 0;
+  --z-index: 0;
 
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
+  z-index: var(--z-index);
 
-  transform: var(--page-offset);
+  transform: translateX(var(--page-offset));
   transition: transform 0.3s;
 
   &.previous {
@@ -19,6 +24,7 @@
   }
 
   &.current {
+    --z-index: 1;
     --page-offset: 0;
   }
 
@@ -35,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .dot {

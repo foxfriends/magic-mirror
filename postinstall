@@ -1,0 +1,4 @@
+#! /bin/bash
+
+mkdir public_html/script
+cp -a node_modules/juliusjs-dev/dist/* public_html/script/

@@ -7,7 +7,7 @@ import S from './index.css';
 
 const classForDirection = direction => [S.previous, S.current, S.next][direction + 1];
 
-const Pager = ({ children, current, onChangePage }) => (
+const Pager = ({ children, current }) => (
   <div className={S.pager}>
     {children.map((child, index) =>
       <div className={classNames(S.page, classForDirection(Math.sign(index - current)))} key={index}>
@@ -17,7 +17,7 @@ const Pager = ({ children, current, onChangePage }) => (
     {children.length > 1
       ? (
         <div className={S.dotsContainer}>
-          {children.map((_, index) => <div className={classNames(S.dot, classForDirection(Math.sign(index - current)))} />)}
+          {children.map((_, index) => <div className={classNames(S.dot, classForDirection(Math.sign(index - current)))} key={index} />)}
         </div>
       )
       : null
@@ -28,6 +28,5 @@ const Pager = ({ children, current, onChangePage }) => (
 export default Pager
   ::propTypes({
     current: PropTypes.number.isRequired,
-    onChangePage: PropTypes.func.isRequired,
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
   });

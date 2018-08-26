@@ -1,0 +1,6 @@
+#! /bin/bash
+pushd public_html
+pushd voice
+mkdfa voice
+popd
+popd
