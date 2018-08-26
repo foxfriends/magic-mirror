@@ -6,7 +6,6 @@ module.exports = () => {
     const routesForMethod = (routes[ctx.request.method.toUpperCase()] || new Map());
     for (const [route, handler] of routesForMethod) {
       const match = route.match(ctx.request.url);
-      console.log(route, match);
       if (match) {
         ctx.request.params = Object.assign({}, ctx.request.params || {}, match);
         await handler(ctx, next);

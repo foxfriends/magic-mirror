@@ -9,62 +9,38 @@
 3	[first]	f ih r s
 3	[last]	l ax s t
 4	[go]	g ow
-5	[page]	p ey jh
-6	[zero]	z ih r ow
-6	[one]	w ah n
-6	[two]	t uw
-6	[three]	th r iy
-6	[four]	f ao r
-6	[five]	f ay v
-6	[six]	s ih k s
-6	[seven]	s eh v ax n
-6	[eight]	ey t
-6	[nine]	n ay n
-6	[ten]	t eh n
-6	[eleven]	ix l eh v ax n
-6	[twelve]	t w eh l v
-7	[a]	ey
-7	[b]	b iy
-7	[c]	s iy
-7	[d]	d iy
-7	[e]	iy
-7	[f]	eh f
-7	[g]	jh iy
-7	[h]	ey ch
-7	[i]	ay
-7	[j]	jh ey
-7	[k]	k ey
-7	[l]	eh l
-7	[m]	eh m
-7	[n]	eh n
-7	[o]	ow
-7	[p]	p iy
-7	[q]	k y uw
-7	[r]	ah r
-7	[s]	eh s
-7	[t]	t iy
-7	[u]	y uw
-7	[v]	v iy
-7	[w]	d ax
-7	[x]	eh k s
-7	[y]	w ay
-7	[z]	z iy
-8	[_NOISE_]	hh
-8	[_NOISE_]	hh ah
-8	[_NOISE_]	hh ax
-8	[_NOISE_]	k
-8	[_NOISE_]	k ah
-8	[_NOISE_]	k ax
-8	[_NOISE_]	t
-8	[_NOISE_]	t ah
-8	[_NOISE_]	t ax
-8	[_NOISE_]	s
-8	[_NOISE_]	s ah
-8	[_NOISE_]	s ax
-8	[_NOISE_]	f m
-8	[_NOISE_]	l ax
-8	[_NOISE_]	l ah
+5	[sleep]	s l iy p
+5	[wake]	w ey k
+6	[page]	p ey jh
+7	[zero]	z ih r ow
+7	[one]	w ah n
+7	[two]	t uw
+7	[three]	th r iy
+7	[four]	f ao r
+7	[five]	f ay v
+7	[six]	s ih k s
+7	[seven]	s eh v ax n
+7	[eight]	ey t
+7	[nine]	n ay n
+7	[ten]	t eh n
+7	[eleven]	ix l eh v ax n
+7	[twelve]	t w eh l v
 8	[hello]	hh eh l ow
 8	[well]	w eh l
 8	[please]	p l iy z
 8	[house]	hh aw s
+9	[_NOISE_]	hh
+9	[_NOISE_]	hh ah
+9	[_NOISE_]	hh ax
+9	[_NOISE_]	k
+9	[_NOISE_]	k ah
+9	[_NOISE_]	k ax
+9	[_NOISE_]	t
+9	[_NOISE_]	t ah
+9	[_NOISE_]	t ax
+9	[_NOISE_]	s
+9	[_NOISE_]	s ah
+9	[_NOISE_]	s ax
+9	[_NOISE_]	f m
+9	[_NOISE_]	l ax
+9	[_NOISE_]	l ah

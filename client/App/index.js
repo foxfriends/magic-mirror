@@ -7,6 +7,8 @@ import { classNames } from '../helpers';
 import Pager from './Pager';
 import LayoutOrganizer from './LayoutOrganizer';
 import Widget from './Widget';
+import VoiceOutput from './VoiceOutput';
+
 import * as ducks from './ducks';
 import S from './index.css';
 
@@ -20,6 +22,7 @@ const App = ({ asleep, currentPage, pages }) => (
       ))}
     </Pager>
     <div className={classNames(S.sleepOverlay, asleep ? S.asleep : null)} />
+    <VoiceOutput />
   </>
 );
 

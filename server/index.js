@@ -4,22 +4,25 @@ const Koa = require('koa');
 const bodyparser = require('koa-bodyparser');
 
 require('./require-extensions');
-const socketHandler = require('./socket-handler');
-const { logger, inject, static, broadcast, mount } = require('./middleware');
+const sockets = require('./sockets');
+const { logger, inject, static, mount } = require('./middleware');
+const { command, monitor } = require('./widgets');
 
 const app = new Koa();
 const server = http.createServer(app.callback());
 const io = socketIO(server);
 
-io.on('connection', socketHandler(io));
+io.on('connection', sockets(io));
+
+app.context.io = io;
+app.context.devices = sockets.devices;
 
 app
-  .use(logger('HTTP Request'))
+  .use(logger('HTTP'))
   .use(bodyparser())
   .use(inject({ config: JSON.stringify(require('../magic.toml')) }))
-  .use(mount('/broadcast', broadcast(io)))
+  .use(mount('/command', command()))
+  .use(mount('/monitor', monitor()))
   .use(static('./public_html'));
-
-server;
 
 module.exports = server;

@@ -1,3 +1,7 @@
+mode = "mirror"
+name = "Bedroom Mirror"
+voice = true
+
 [[pages]]
 width = 16
 height = 9
@@ -21,6 +25,13 @@ height = 9
     style = "analog"
     hour-format = 12
     show-seconds = true
+  [[pages.frames]]
+  top = 8
+  left = 0
+  width = 4
+  height = 2
+    [pages.frames.contents]
+    widget = "weather"
 
 [[pages]]
 width = 16

@@ -1,13 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { mapTo } from 'rxjs/operators';
+import { mapTo, map } from 'rxjs/operators';
 
 import { nextPage, previousPage } from './App/ducks';
+import { setVoiceText } from './App/VoiceOutput/ducks';
 import App from './App';
 import store from './store';
 
-import { listenFor } from './input';
+import { listenFor, source } from './input';
 
 import './index.css';
 
@@ -20,6 +21,24 @@ ReactDOM.render(
   root,
 );
 
-listenFor(/(previous page|go left)/i).pipe(mapTo(previousPage())).subscribe(::store.dispatch);
-listenFor(/(next page|go right)/i).pipe(mapTo(nextPage())).subscribe(::store.dispatch);
+listenFor(/(previous page|go left)/i)
+  .pipe(
+    source.voice(),
+    mapTo(previousPage()),
+  )
+  .subscribe(::store.dispatch);
+listenFor(/(next page|go right)/i)
+  .pipe(
+    source.voice(),
+    mapTo(nextPage()),
+  )
+  .subscribe(::store.dispatch);
+
+listenFor(/^(?!_NOISE_).*/)
+  .pipe(
+    source.voice(),
+    map(({ message }) => setVoiceText(message)),
+  )
+  .subscribe(::store.dispatch);
+
 listenFor(/.*/).subscribe(::console.log);

@@ -19,10 +19,14 @@ last      l ax s t
 % DIRECTIVE
 go        g ow
 
-
+% STATE
+sleep     s l iy p
+wake      w ey k
 
 % PAGE
 page      p ey jh
+
+
 
 % NUMBER
 zero       z ih r ow
@@ -39,35 +43,13 @@ ten        t eh n
 eleven     ix l eh v ax n
 twelve     t w eh l v
 
-% LETTER
-a         ey
-b         b iy
-c         s iy
-d         d iy
-e         iy
-f         eh f
-g         jh iy
-h         ey ch
-i         ay
-j         jh ey
-k         k ey
-l         eh l
-m         eh m
-n         eh n
-o         ow
-p         p iy
-q         k y uw
-r         ah r
-s         eh s
-t         t iy
-u         y uw
-v         v iy
-w         d ax
-x         eh k s
-y         w ay
-z         z iy
-
 % OUT_OF_VOCABULARY
+hello     hh eh l ow
+well      w eh l
+please    p l iy z
+house     hh aw s
+
+% NOISE
 _NOISE_   hh
 _NOISE_   hh ah
 _NOISE_   hh ax
@@ -83,8 +65,3 @@ _NOISE_   s ax
 _NOISE_   f m
 _NOISE_   l ax
 _NOISE_   l ah
-
-hello     hh eh l ow
-well      w eh l
-please    p l iy z
-house     hh aw s

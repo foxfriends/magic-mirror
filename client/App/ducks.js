@@ -1,7 +1,5 @@
 import { combineEpics } from 'redux-observable';
 
-import { reducer as widgetReducer, epic as widgetEpic } from './Widget/ducks';
-
 function init() {
   return {
     asleep: false,

@@ -1,0 +1,6 @@
+.icon {
+  --size: 24px;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+}
