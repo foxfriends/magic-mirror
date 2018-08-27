@@ -24,12 +24,21 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Weather Icons';
+  src: url('./assets/fonts/weathericons-regular-webfont.ttf');
+  font-variant-ligatures: common-ligatures discretionary-ligatures contextual;
+  font-feature-settings: "liga" 1;
+  font-feature-settings: "liga1" on;
+}
+
 :global(:root) {
   --color--background: black;
   --color--text: white;
 
-  --font--body: 'Alegreya Sans', sans-serif;
-  --font--heading: 'Alegreya Sans', sans-serif;
+  --font-family--body: 'Alegreya Sans', sans-serif;
+  --font-family--heading: 'Alegreya Sans', sans-serif;
+  --font-family--weather: 'Weather Icons';
 
   --font-size--body: 32pt;
   --font-size--note: 20pt;
@@ -42,7 +51,7 @@
 :global(body) {
   margin: 0;
   padding: 0;
-  font-family: var(--font--body);
+  font-family: var(--font-family--body);
   font-size: var(--font-size--body);
   background-color: var(--color--background);
   color: var(--color--text);

@@ -27,11 +27,13 @@ height = 9
     show-seconds = true
   [[pages.frames]]
   top = 8
-  left = 0
+  left = 1
   width = 4
   height = 2
     [pages.frames.contents]
     widget = "weather"
+    [pages.frames.contents.config]
+    location = "Ottawa, Canada"
 
 [[pages]]
 width = 16

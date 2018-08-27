@@ -12,7 +12,7 @@ module.exports = env => ({
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.(png|svg|gif|jpe?g)$/, loader: 'file-loader?name=images/[hash].[ext]!img-loader' },
-      { test: /\.ttf$/, loader: 'file-loader?name=fonts/[hash].[ext]' },
+      { test: /\.(ttf|eot|otf|woff2?)$/, loader: 'file-loader?name=fonts/[hash].[ext]' },
       {
         test: /\.css$/,
         exclude: /node_modules/,

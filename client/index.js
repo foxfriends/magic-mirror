@@ -11,6 +11,7 @@ import store from './store';
 import { listenFor, source } from './input';
 
 import './index.css';
+import './assets/fonts/weather-icons.css';
 
 const root = document.querySelector('#root');
 

@@ -1,0 +1,43 @@
+.placeholder, .weather {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size--note);
+  align-items: center;
+}
+
+.placeholder {
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.weather {
+  padding: 1pc;
+}
+
+.location {
+  flex-grow: 0;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image, .temperatures {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1pc;
+}
+
+.image {
+  align-items: center;
+  & :global(.wi) {
+    font-size: 86pt;
+  }
+}

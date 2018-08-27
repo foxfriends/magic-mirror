@@ -5,11 +5,13 @@ import * as ducks from './ducks';
 
 import Greeting from './Greeting';
 import Clock from './Clock';
+import Weather from './Weather';
 
 const componentForWidget = widget => {
   switch (widget.toLowerCase()) {
     case 'greeting': return Greeting;
     case 'clock': return Clock;
+    case 'weather': return Weather;
     default: return React.Fragment;
   }
 };

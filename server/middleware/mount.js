@@ -21,10 +21,10 @@ module.exports = function (method, route, middleware) {
   const routeMatches = path => path.startsWith(route + '/') || path === route;
 
   return async (ctx, next) => {
-    if (routeMatches(ctx.request.url) && (!method || ctx.request.method === method)) {
-      ctx.request.url = ctx.request.url.slice(route.length);
+    if (routeMatches(ctx.path) && (!method || ctx.request.method === method)) {
+      ctx.path = `${ctx.path}`.slice(route.length) || '/';
       await middleware(ctx, next);
-      ctx.request.url = route + ctx.request.url;
+      ctx.path = route + ctx.path;
     } else {
       await next();
     }

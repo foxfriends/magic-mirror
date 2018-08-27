@@ -6,7 +6,7 @@ const bodyparser = require('koa-bodyparser');
 require('./require-extensions');
 const sockets = require('./sockets');
 const { logger, inject, static, mount } = require('./middleware');
-const { command, monitor } = require('./widgets');
+const { command, monitor, weather } = require('./widgets');
 
 const app = new Koa();
 const server = http.createServer(app.callback());
@@ -23,6 +23,7 @@ app
   .use(inject({ config: JSON.stringify(require('../magic.toml')) }))
   .use(mount('/command', command()))
   .use(mount('/monitor', monitor()))
+  .use(mount('/weather', weather()))
   .use(static('./public_html'));
 
 module.exports = server;
