@@ -20,7 +20,7 @@
     "@babel/preset-react": "^7.0.0-beta.46",
     "autoprefixer": "^9.1.1",
     "babel-loader": "^8.0.0-beta.4",
-    "babel-plugin-react-css-modules": "^3.4.2",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "css-loader": "^1.0.0",
     "date-fns": "^2.0.0-alpha.16",
     "electron": "^18.3.7",
